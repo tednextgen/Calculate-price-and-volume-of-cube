@@ -1,0 +1,98 @@
+#!/usr/bin/env python3
+# price of something
+bruh = True
+while bruh == True:
+    print("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&")
+    userInput1 = input("Please enter your name: ")
+    print("")
+    print(userInput1 + "'s Assignment 5 Total Calculator Program")
+    print("")
+    print("Enter a price and a quantity in order to calculate Total Price.")
+
+    def is_number():
+        while True:
+            try:
+                userInput2 = float(input("Enter a price: "))
+                if userInput2 > 0:
+                    return userInput2
+                else:
+                    print("Please enter a price greater than zero")
+            except ValueError:
+                print("Invalid decimal number. Please try again.")
+    def get_quantity():
+        while True:
+            try:
+                userInput3 = int(input("Enter quantity: "))
+                if userInput3 > 0:
+                    return userInput3
+                else:
+                    print("Enter a quantity greater than zero")
+            except ValueError:
+                print("Invalid integer. Please try again.")
+
+    userInput2 = is_number()
+    userInput3 = get_quantity()
+    total = userInput2 * float(userInput3)
+    # Volume of a cube or something
+    def is_width():
+        while True:
+            try:
+                userInput4 = float(input("Enter width: "))
+                if userInput4 > 0:
+                    return userInput4
+                else:
+                    print("Enter a width greater than zero")
+            except ValueError:
+                print("Invalid decimal number. Please try again.")
+    def is_height():
+        while True:
+            try:
+                userInput5 = float(input("Enter height: "))
+                if userInput5 > 0:
+                    return userInput5
+                else:
+                    print("Enter a height greater than zero")
+            except ValueError:
+                print("Invalid decimal. Please try again.")
+    def is_depth():
+        while True:
+            try:
+                userInput6 = float(input("Enter depth: "))
+                if userInput6 > 0:
+                    return userInput6
+                else:
+                    print("Enter a depth greater than zero")
+            except ValueError:
+                print("Invalid decimal. Please Try again")
+
+    print("Here is your calculated Total Price: ")
+    print("You entered the price: $", userInput2)
+    print("You entered the quantity: ", userInput3)
+    print("Calculated Total price: $",total)
+
+    print("")
+    userInput4 = is_width()
+    userInput5 = is_height()
+    userInput6 = is_depth()
+    userInput7 = input("Enter metric 'meters' or 'feet': ")
+    total_volume = userInput4 * userInput5 * userInput6
+
+    print("Enter width, height, depth and metric in order to calculate Total Volume:")
+    print("You entered the width: ", userInput4, " ", userInput7)
+    print("You entered the height: ", userInput5, " ", userInput7)
+    print("You entered the depth:  ",userInput6, " ", userInput7)
+    print("Calculated Total Volume: ",total_volume, " cubic ", userInput7)
+    userInput8 = input("Would you like to continue? (enter yes or no): ")
+    tomato = True
+    while tomato == True:
+        if(userInput8 == "no"):
+            bruh = False
+            tomato = False
+        elif(userInput8 == "yes"):
+            bruh = True
+            tomato = False
+        else:
+            print("Your choice must either be yes or no. Please choose again")
+            userInput8 = input("Would you like to continue? (enter yes or no): ")
+print("Goodbye " + userInput1 + "!")
+print("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&")
